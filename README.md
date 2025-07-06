@@ -7,7 +7,7 @@ Se presentan dos casos
 
 Caso 1: cuando solo se registra pedido para clientes que lo reciben desde tienda
 
-![Logo del proyecto](tradicional.png "caso 1")
+![Logo del proyecto](tradicional.PNG "caso 1")
 
 
 curl :
@@ -40,7 +40,7 @@ curl --request POST \
 
 Caso 2: cuando se registra pedido y su envio para clientes piden para delivery
 
-![Logo del proyecto](evento.png "caso 2")
+![Logo del proyecto](evento.PNG "caso 2")
 
 
 curl :

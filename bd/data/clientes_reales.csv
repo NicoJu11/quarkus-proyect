@@ -1,0 +1,101 @@
+cliente_id,nombre,apellido,email,telefono,fecha_registro,activo
+1,Natividad,Vela,fcastillo@example.net,(497)321-9790x63412,2007-06-13 02:33:09.841565,False
+2,Wilfrido,Segura,mendezolivia@example.com,(450)955-4154x4272,1997-06-01 18:27:58.129358,False
+3,Florencia,Delgadillo,gbustamante@example.org,(755)941-0196x7266,1989-03-22 20:29:17.825845,False
+4,José María,Toledo,ramonnatividad@example.net,774.514.0086,1990-09-18 21:39:37.164202,False
+5,María José,Rojas,benavidezsalma@example.com,(708)249-5186,2004-04-12 13:17:40.096746,False
+6,José María,Méndez,karlamuniz@example.com,549.277.3368x57772,1983-04-11 03:49:47.921280,True
+7,Trinidad,Rocha,wcarvajal@example.com,804.715.4356,1990-02-16 12:17:04.841231,True
+8,Oswaldo,Quiñones,garridoevelio@example.org,07233438014,1987-06-11 09:17:15.101095,False
+9,Luisa,Tórrez,blancolucia@example.net,699.295.9236,1986-12-13 22:15:09.205740,False
+10,Lorenzo,Orozco,lmendoza@example.org,+58(7)1901724997,1974-03-08 19:24:13.849054,False
+11,Alfredo,Macías,guadalupeborrego@example.org,1-556-720-0110,1993-10-26 09:13:08.190697,False
+12,Ana,Caldera,aldonza16@example.net,1-763-869-9771x700,2019-09-09 11:52:08.793635,True
+13,Ramón,Leiva,graciaemilia@example.net,606.936.0844x3392,1991-05-11 17:56:09.219069,False
+14,Santiago,Tafoya,silvia50@example.net,1-174-428-2490x0881,2003-03-20 13:31:17.343795,False
+15,Bernabé,Canales,alonsoaugusto@example.net,723-115-5916,2017-02-12 18:52:36.395678,False
+16,Miriam,Ramón,marcela22@example.org,023-321-7929x786,1970-03-08 12:35:53.121480,True
+17,Mauricio,Armas,benitezalta-gracia@example.net,01815785010,1977-12-03 13:20:46.250889,True
+18,Espartaco,Mireles,jaimedominguez@example.org,+22(6)4926041562,2017-07-24 03:59:58.633097,False
+19,Federico,Saldaña,francisca91@example.net,1-377-107-0727x91024,1999-09-12 10:13:02.517463,False
+20,Serafín,Ruelas,martinsanches@example.org,269.646.4510x446,1999-10-16 05:14:43.688832,True
+21,Noemí,Orellana,mercedes70@example.org,1-474-319-5559x32665,2017-01-22 00:42:25.099463,True
+22,Graciela,Arguello,adalberto64@example.com,(019)883-9090,2001-08-02 02:25:12.195002,True
+23,Sonia,Hurtado,perla97@example.org,755.237.2907,2003-06-22 19:56:07.313819,True
+24,Salma,Rolón,rcovarrubias@example.net,(625)783-0100x608,2007-03-10 21:46:58.487483,True
+25,Óscar,Rivera,ana34@example.com,07862863258,1975-07-27 17:32:27.057136,False
+26,Martín,Mata,conchita05@example.com,1-527-901-6648x51422,2015-10-26 16:20:40.777009,True
+27,Susana,Ramón,abrahamlebron@example.org,07891726270,2009-12-13 00:37:39.211524,True
+28,Emilio,Alcaraz,gallegosyuridia@example.com,1-229-953-9823,1997-04-11 21:10:45.209287,True
+29,Gabriel,Rendón,maria-elenalara@example.com,(703)626-0100x9675,2022-10-29 11:29:55.004670,True
+30,Margarita,Saucedo,sceja@example.com,567-709-4981x22862,2017-06-18 16:40:17.609006,True
+31,Alma,Miranda,maria-cristinarios@example.org,504.253.6387x99079,1981-04-24 05:30:14.763057,True
+32,Eugenia,Esquivel,saucedohelena@example.org,+59(3)7816084614,2008-08-03 12:49:46.760015,False
+33,Gabriel,Aponte,lozanoalejandra@example.net,(606)397-4649x409,1974-05-13 02:31:44.098317,False
+34,Claudia,González,juliasarabia@example.net,1-895-467-0183x658,1996-01-11 17:58:02.785963,False
+35,César,Solís,gabrielarce@example.com,668-087-7948,1988-10-02 13:44:46.959282,True
+36,Silvia,de la Torre,luisa27@example.net,591-650-7946,1974-05-16 09:42:04.387204,False
+37,Reina,Cepeda,bonillatania@example.com,(639)094-3705x9733,1994-04-28 05:59:17.306958,True
+38,María Cristina,Prado,villarrealgerman@example.org,(304)242-0150x390,2010-12-03 08:49:41.644800,False
+39,Luis Manuel,Urrutia,jaimesadela@example.org,114-558-4607,2023-05-07 23:12:54.364295,False
+40,Nancy,Quintana,fierromaria-jose@example.net,1-516-758-3856,1971-03-30 08:53:25.540785,False
+41,Amalia,Ruelas,noelia15@example.com,249.053.6949,1997-01-17 14:13:05.990334,False
+42,Cristal,Bétancourt,montesfrancisco@example.org,1-733-401-0051x146,2001-10-02 18:50:09.780822,True
+43,Citlali,Longoria,genaro97@example.org,614-928-1663x3282,1971-05-10 10:47:19.099578,True
+44,Olga,Madrid,helena86@example.org,(274)009-5106x275,1983-07-09 14:51:40.038440,True
+45,Verónica,Salcido,maria-eugenia50@example.net,1-392-584-5498,1989-02-04 04:16:45.171970,True
+46,Helena,Matías,godoyricardo@example.com,+98(1)1725620331,2006-07-26 19:20:14.628338,True
+47,Cecilia,Mojica,carrillodaniela@example.com,872.634.5291x302,1987-11-26 04:39:08.703286,True
+48,Adalberto,Bétancourt,kcaraballo@example.com,1-588-300-2647x150,1989-03-30 02:24:13.725347,False
+49,Adriana,Montes,eduardo85@example.com,1-261-124-4510x252,2016-01-11 11:03:22.557245,True
+50,Citlali,Trujillo,luis-miguelcaldera@example.com,(952)385-6667x065,1987-06-24 05:24:40.205903,True
+51,Adalberto,Gurule,gamboabernabe@example.net,1-461-824-7530x272,1978-09-06 13:22:58.686220,True
+52,Pascual,Menéndez,yanezcarlota@example.org,(708)393-6138,2016-12-14 00:29:32.314022,False
+53,Alfonso,Figueroa,npulido@example.net,513.512.4252x87506,2015-01-26 15:16:57.726942,False
+54,Lourdes,Navarro,rozuna@example.com,846.252.3940x07787,1973-10-21 17:33:43.064820,True
+55,Violeta,Alarcón,alejandroabelardo@example.net,+93(5)2299976515,1987-07-12 07:22:12.529103,False
+56,Carlos,Beltrán,felicianopatricia@example.org,896.457.1647,2020-06-09 13:42:22.934541,False
+57,Ana Luisa,Lerma,juliaacuna@example.net,119.708.8316,1978-07-30 04:45:40.531491,True
+58,Ivonne,Iglesias,colladoarcelia@example.net,552.664.0434,1987-02-16 02:29:08.304594,True
+59,Yuridia,Acevedo,wilfrido80@example.com,(117)415-0194x258,1985-08-05 10:13:16.401156,True
+60,Teresa,Carreón,cabrerajonas@example.org,759.791.1774x2356,1970-08-20 05:10:06.806112,True
+61,Uriel,Gallardo,deboraaltamirano@example.org,529.624.0136x415,2017-12-29 17:05:29.153409,True
+62,Adalberto,Concepción,lcorona@example.net,+50(2)5122496904,1977-03-12 23:16:46.980034,True
+63,Martín,Robles,antoniotovar@example.com,1-105-780-6673,2012-11-19 16:04:44.363669,False
+64,Luis Manuel,Saavedra,lgaribay@example.org,687-767-3267x3272,1990-08-01 03:13:13.583049,False
+65,Martín,Arteaga,alvarezguillermina@example.com,1-555-346-2910,1999-03-09 00:10:24.408519,True
+66,Lourdes,Aponte,uriel44@example.net,226.657.2519x4458,2006-07-26 02:04:47.784872,False
+67,Gabriel,Villegas,israelgomez@example.net,224.297.8745x2786,1990-10-24 02:32:58.734666,True
+68,Flavio,Fernández,alma12@example.net,210.927.9442x28703,2011-10-05 04:01:00.861953,False
+69,Wendolin,Carrión,saguilar@example.com,070.228.9973x8143,1998-03-14 20:11:06.145980,False
+70,Natalia,Nieto,nevarezdalia@example.com,782-349-4895,1970-04-12 06:59:22.507486,True
+71,Bianca,Nájera,soledad27@example.net,1-886-716-8684x314,1972-09-23 00:28:14.356539,False
+72,Inés,Hinojosa,elias99@example.net,(133)303-2786,1976-09-03 14:35:18.764764,True
+73,Verónica,Barela,adanmojica@example.com,152.728.2239,2005-05-29 23:52:02.911282,False
+74,Rubén,Alcala,camposluis-miguel@example.org,749-570-0315,1997-11-14 07:58:39.025008,False
+75,Norma,Rosas,fidelmayorga@example.org,412.195.5551x93415,2017-10-27 11:28:03.240532,True
+76,Ana Luisa,Gracia,adrianamontalvo@example.org,136-171-8289,1973-10-29 01:15:04.800185,True
+77,Hernán,Viera,lorenzo19@example.org,01256099805,1994-01-03 13:37:07.824296,False
+78,Nancy,Caraballo,gilberto34@example.com,(220)159-0992x936,1998-06-24 22:48:48.265276,False
+79,Aurelio,Zamudio,lcalvillo@example.net,(810)712-8420x1105,1998-05-20 04:06:01.022385,False
+80,Hilda,Vargas,porfiriorivas@example.org,217-458-6098,1979-01-07 09:31:13.541934,True
+81,Concepción,Riojas,isabela94@example.com,(578)008-0795,1999-11-07 03:23:06.951997,False
+82,Benito,Baca,rojohumberto@example.com,083-526-2469x722,1977-03-07 04:18:41.442475,True
+83,Jaqueline,Montalvo,balderasgeronimo@example.com,(758)145-8702,2021-10-06 21:20:26.011609,False
+84,Marisol,Roque,patinojose-manuel@example.com,1-696-687-9427x9713,1997-10-06 04:12:59.804160,True
+85,Marcela,Cordero,testrada@example.org,666-757-1333,2014-07-13 08:36:25.274955,False
+86,Antonia,Tejada,benitoaragon@example.net,419.704.4255x66633,2002-07-07 20:32:29.650208,True
+87,Cecilia,Ordóñez,karinaresendez@example.net,940.831.5421,1999-12-21 15:58:45.735221,True
+88,Sergio,Herrera,uriel17@example.com,(063)206-6243x84003,2010-02-28 12:53:10.011162,True
+89,Mayte,Raya,benavidezfelix@example.org,01459371100,2022-12-15 07:55:53.776229,False
+90,Alberto,Garrido,esperanza17@example.com,(299)759-0570,1998-12-30 12:46:17.323482,False
+91,Francisca,Archuleta,abigailhidalgo@example.com,282-703-0822x38685,1992-07-17 16:50:18.563508,True
+92,Elsa,Jasso,rconcepcion@example.com,989-717-7028,1984-03-26 14:07:16.625954,True
+93,Cristian,Montañez,xolvera@example.com,334.421.8847x305,2024-04-20 10:10:00.895090,False
+94,Miguel,Alcala,corraleugenia@example.com,1-177-132-0975x71324,2018-04-18 20:21:00.132957,True
+95,Irma,Sáenz,camposrufino@example.com,833-278-7456x0588,2004-12-24 13:10:22.210032,False
+96,María Luisa,Alemán,concepcionalfonso@example.org,1-044-847-6833,1985-03-13 13:06:11.621643,True
+97,Fidel,Cornejo,daliaarroyo@example.com,1-845-535-5020x70136,2001-07-01 21:25:00.138775,False
+98,Laura,Reyna,gposada@example.com,447-316-0584x79175,2017-06-18 05:01:45.683412,False
+99,Serafín,Laureano,marisolcadena@example.net,152.554.4454x11283,2020-12-04 22:29:33.707088,False
+100,Ángela,Amador,abelsarabia@example.net,926-425-3123,1970-04-14 07:06:14.692153,True

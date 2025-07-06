@@ -1,0 +1,131 @@
+2025-07-05 20:47:45 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.kafka.devservice.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-05 20:47:45 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-05 20:47:45 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.test-port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-05 20:47:46 INFO  [io.sm.re.me.kafka] (Quarkus Main Thread) SRMSG18229: Configured topics for channel 'order-shipping': [order-shipping-topic]
+2025-07-05 20:47:46 INFO  [io.co.ka.se.KafkaAvroDeserializerConfig] (Quarkus Main Thread) KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = false
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host = 
+	proxy.port = -1
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.reader = true
+	use.latest.version = true
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-05 20:47:46 INFO  [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18257: Kafka consumer kafka-consumer-order-shipping, connected to Kafka brokers 'PLAINTEXT://localhost:19092', belongs to the 'order-shipping-group-01' consumer group and is configured to poll records from [order-shipping-topic]
+2025-07-05 20:47:46 INFO  [io.quarkus] (Quarkus Main Thread) api-order-shipping-v1-consumer 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.20.1) started in 3.721s. 
+2025-07-05 20:47:46 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-07-05 20:47:46 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, config-yaml, confluent-registry-avro, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, kafka-client, messaging, messaging-kafka, reactive-mysql-client, rest-client, rest-client-jackson, smallrye-context-propagation, vertx]
+2025-07-05 20:49:52 INFO  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18256: Initialize record store for topic-partition 'order-shipping-topic-0' at position 9.
+2025-07-05 20:50:47 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping inserted: S789
+2025-07-05 20:50:47 WARN  [or.hi.en.jd.sp.SqlExceptionHelper] (vert.x-eventloop-thread-0) SQL Error: 1452, SQLState: 23000
+2025-07-05 20:50:47 ERROR [or.hi.en.jd.sp.SqlExceptionHelper] (vert.x-eventloop-thread-0) {errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}
+2025-07-05 20:50:47 ERROR [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Error get event S789: error executing SQL statement [{errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}] [insert into shipper (amount_shipper,carrier,date_estimated_delivery,date_shipper,note_shipper,purchase_order_id,status_id,tracking_number,shipper_id) values (?,?,?,?,?,?,?,?,?)]
+2025-07-05 20:50:47 WARN  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18204: A message sent to channel `order-shipping` has been nacked, ignored failure is: error executing SQL statement [{errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}] [insert into shipper (amount_shipper,carrier,date_estimated_delivery,date_shipper,note_shipper,purchase_order_id,status_id,tracking_number,shipper_id) values (?,?,?,?,?,?,?,?,?)].
+2025-07-05 20:50:47 INFO  [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18224: Executing consumer revoked re-balance listener for group 'order-shipping-group-01'
+2025-07-05 20:50:47 ERROR [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18222: Unable to execute consumer revoked re-balance listener for group 'order-shipping-group-01': org.apache.kafka.clients.consumer.CommitFailedException: Offset commit cannot be completed since the consumer is not part of an active group for auto partition assignment; it is likely that the consumer was kicked out of the group.
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.sendOffsetCommitRequest(ConsumerCoordinator.java:1280)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.commitOffsetsSync(ConsumerCoordinator.java:1116)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.commitSync(ClassicKafkaConsumer.java:724)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.commitSync(ClassicKafkaConsumer.java:714)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.commitSync(KafkaConsumer.java:1009)
+	at io.smallrye.reactive.messaging.kafka.commit.KafkaThrottledLatestProcessedCommit.partitionsRevoked(KafkaThrottledLatestProcessedCommit.java:152)
+	at io.smallrye.reactive.messaging.kafka.impl.RebalanceListeners$WrappedConsumerRebalanceListener.onPartitionsRevoked(RebalanceListeners.java:53)
+	at org.apache.kafka.clients.consumer.ConsumerRebalanceListener.onPartitionsLost(ConsumerRebalanceListener.java:198)
+	at org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker.invokePartitionsLost(ConsumerRebalanceListenerInvoker.java:117)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinPrepare(ConsumerCoordinator.java:780)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:473)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:415)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:511)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.updateAssignmentMetadataIfNeeded(ClassicKafkaConsumer.java:657)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.poll(ClassicKafkaConsumer.java:616)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.poll(ClassicKafkaConsumer.java:596)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:874)
+	at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer.lambda$poll$4(ReactiveKafkaConsumer.java:199)
+	at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
+	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onItem(UniOperatorProcessor.java:47)
+	at io.smallrye.mutiny.operators.uni.UniMemoizeOp.forwardTo(UniMemoizeOp.java:123)
+	at io.smallrye.mutiny.operators.uni.UniMemoizeOp.subscribe(UniMemoizeOp.java:67)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn.lambda$subscribe$0(UniRunSubscribeOn.java:27)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-05 20:50:47 ERROR [or.ap.ka.cl.co.in.ConsumerRebalanceListenerInvoker] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] User provided listener io.smallrye.reactive.messaging.kafka.impl.RebalanceListeners$WrappedConsumerRebalanceListener failed on invocation of onPartitionsLost for partitions [order-shipping-topic-0]: org.apache.kafka.clients.consumer.CommitFailedException: Offset commit cannot be completed since the consumer is not part of an active group for auto partition assignment; it is likely that the consumer was kicked out of the group.
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.sendOffsetCommitRequest(ConsumerCoordinator.java:1280)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.commitOffsetsSync(ConsumerCoordinator.java:1116)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.commitSync(ClassicKafkaConsumer.java:724)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.commitSync(ClassicKafkaConsumer.java:714)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.commitSync(KafkaConsumer.java:1009)
+	at io.smallrye.reactive.messaging.kafka.commit.KafkaThrottledLatestProcessedCommit.partitionsRevoked(KafkaThrottledLatestProcessedCommit.java:152)
+	at io.smallrye.reactive.messaging.kafka.impl.RebalanceListeners$WrappedConsumerRebalanceListener.onPartitionsRevoked(RebalanceListeners.java:53)
+	at org.apache.kafka.clients.consumer.ConsumerRebalanceListener.onPartitionsLost(ConsumerRebalanceListener.java:198)
+	at org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker.invokePartitionsLost(ConsumerRebalanceListenerInvoker.java:117)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinPrepare(ConsumerCoordinator.java:780)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:473)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:415)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:511)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.updateAssignmentMetadataIfNeeded(ClassicKafkaConsumer.java:657)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.poll(ClassicKafkaConsumer.java:616)
+	at org.apache.kafka.clients.consumer.internals.ClassicKafkaConsumer.poll(ClassicKafkaConsumer.java:596)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:874)
+	at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer.lambda$poll$4(ReactiveKafkaConsumer.java:199)
+	at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
+	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onItem(UniOperatorProcessor.java:47)
+	at io.smallrye.mutiny.operators.uni.UniMemoizeOp.forwardTo(UniMemoizeOp.java:123)
+	at io.smallrye.mutiny.operators.uni.UniMemoizeOp.subscribe(UniMemoizeOp.java:67)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:35)
+	at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn.lambda$subscribe$0(UniRunSubscribeOn.java:27)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-05 20:50:52 INFO  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18256: Initialize record store for topic-partition 'order-shipping-topic-0' at position 9.
+2025-07-05 20:50:52 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping inserted: S789
+2025-07-05 20:50:52 WARN  [or.hi.en.jd.sp.SqlExceptionHelper] (vert.x-eventloop-thread-0) SQL Error: 1452, SQLState: 23000
+2025-07-05 20:50:52 ERROR [or.hi.en.jd.sp.SqlExceptionHelper] (vert.x-eventloop-thread-0) {errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}
+2025-07-05 20:50:52 ERROR [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Error get event S789: error executing SQL statement [{errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}] [insert into shipper (amount_shipper,carrier,date_estimated_delivery,date_shipper,note_shipper,purchase_order_id,status_id,tracking_number,shipper_id) values (?,?,?,?,?,?,?,?,?)]
+2025-07-05 20:50:52 WARN  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18204: A message sent to channel `order-shipping` has been nacked, ignored failure is: error executing SQL statement [{errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}] [insert into shipper (amount_shipper,carrier,date_estimated_delivery,date_shipper,note_shipper,purchase_order_id,status_id,tracking_number,shipper_id) values (?,?,?,?,?,?,?,?,?)].
+2025-07-05 20:51:02 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping inserted: S789

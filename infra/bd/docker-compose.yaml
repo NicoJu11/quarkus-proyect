@@ -1,0 +1,15 @@
+services:
+  mariadb10432:
+    image: mariadb:10.4.32
+    container_name: mariadb10432
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: 123456789
+      TZ: America/Lima
+    ports:
+      - "3308:3306"
+    volumes:
+      - /Users/marcolopez/Databases/MariaDB/mariadb10432-data:/var/lib/mysql
+      - /Users/marcolopez/Databases/MariaDB/mariadb10432-conf/mysql.conf.d:/etc/mysql/conf.d
+    command:
+      --sql-mode="STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO"

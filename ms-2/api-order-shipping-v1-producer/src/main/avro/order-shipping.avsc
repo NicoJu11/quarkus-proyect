@@ -1,0 +1,43 @@
+{
+    "type": "record",
+    "name": "OrderShipping",
+    "namespace": "pe.edu.galaxy.apps.model",
+    "doc": "order shipping is a record that represents the shipping details of an order, including the order identifier.",
+    "fields": [
+    {
+      "name": "shipperId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "purchaseOrderId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "carrier",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "trackingNumber",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "amountShipper",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "statusId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "noteShipper",
+      "type": ["null", "string"],
+      "default": null
+    }
+    ]
+}

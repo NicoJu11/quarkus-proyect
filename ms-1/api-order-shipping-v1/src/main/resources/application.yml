@@ -1,0 +1,17 @@
+quarkus:
+  package:
+    jar:
+      enabled: true
+  http:
+    port: 9098
+  datasource:
+    db-kind: mysql
+    username: root
+    password: 123456789
+    reactive:
+      url: vertx-reactive:mysql://localhost:3308/bd_order_shipping
+  hibernate-orm:
+    database:
+      generation: none
+      version-check:
+        enabled: false

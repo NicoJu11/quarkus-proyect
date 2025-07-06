@@ -1,0 +1,6 @@
+estado_id,nombre,descripcion
+1,Preparando,El pedido está siendo preparado para envío
+2,En tránsito,El pedido ha sido enviado y está en camino
+3,Entregado,El pedido ha sido entregado al cliente
+4,Devuelto,El pedido fue devuelto
+5,Retrasado,El envío está experimentando retrasos

@@ -1,0 +1,67 @@
+quarkus:
+  package:
+    jar:
+      enabled: true
+  http:
+    port: 9092
+    test-port: 0
+  devservices:
+    enabled: false
+  kafka:
+    devservice:
+      enabled: false
+  datasource:
+    db-kind: mysql
+    username: root
+    password: 123456789
+    reactive:
+      url: vertx-reactive:mysql://localhost:3308/bd_order_shipping
+  hibernate-orm:
+    database:
+      generation: none
+      version-check:
+        enabled: false
+  log:
+    level: INFO
+    file:
+      enable: true
+      path: logs/app.log
+      format: "%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n"
+      rotation:
+        max-file-size: 10M
+        max-backup-index: 5
+
+kafka:
+  bootstrap:
+    servers: PLAINTEXT://localhost:19092
+
+mp:
+  messaging:
+    connector:
+      smallrye-kafka:
+        schema:
+          registry:
+            url: http://localhost:8081
+        auto:
+          register:
+            schemas: false
+        use:
+          latest:
+            version: true
+    incoming:
+      order-shipping:
+        connector: smallrye-kafka
+        failure-strategy: ignore
+        key:
+          deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value:
+          deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+        topic: order-shipping-topic
+        group:
+          id: order-shipping-group-01
+        auto:
+          offset:
+            reset: earliest
+        enable:
+          auto:
+            commit: false

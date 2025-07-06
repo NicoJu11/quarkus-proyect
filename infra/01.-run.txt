@@ -1,0 +1,118 @@
+############################################
+### INICIAR AMBIENTE DE KAFKA CON TOPICO ###
+############################################
+
+# 01. Crear subred en Docker
+docker network create --driver=bridge --subnet=172.18.0.0/16 order-local-net
+
+# 02. Ejecutar con Docker Compose kafka
+docker compose -f 01-kafka-server.yml -p order-local-app up -d
+
+# 03. Creacion de topico
+docker exec -it kafka-broker-1 kafka-topics --bootstrap-server localhost:19092 --if-not-exists --create --topic order-shipping-topic --partitions 1 --replication-factor 1
+
+
+############################################
+### DETENER AMBIENTE DE KAFKA CON TOPICO ###
+############################################
+
+# 01. Detener servicio kafka
+docker compose -f 01-kafka-server.yml -p order-local-app down
+
+# 02. Eliminar archivos temporal de Zookeeper
+rm -rf ./zoo/data/* ./zoo/log/*
+
+# 03. Eliminar subred
+docker network rm order-local-net
+
+
+
+############################################
+### PRODUCIR MENSAJES CON PRODUCER CLI   ###
+############################################
+
+# 01. Ingresar al terminal del producer CLI
+docker exec -it kafka-broker-1 kafka-console-producer --bootstrap-server kafka-broker-1:9092 --topic order-shipping-topic
+
+# 02. Usando el formato del schema avro
+{"order":"12340"}
+
+# 03. Ingresando al terminal con un schema avro predefinido
+docker exec -it schema-registry kafka-avro-console-producer \
+  --broker-list kafka-broker-1:9092 \
+  --topic order-shipping-topic \
+  --property schema.registry.url=http://schema-registry:8081 \
+  --property value.schema='{
+    "type": "record",
+    "name": "OrderShipping",
+    "namespace": "pe.edu.galaxy.galaxy.apps.model",
+    "doc": "OrderShipping is a record that represents the shipping details of an order, including the order identifier.",
+    "fields": [
+    {
+      "name": "shipperId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "purchaseOrderId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "carrier",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "trackingNumber",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "amountShipper",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "statusId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "noteShipper",
+      "type": ["null", "string"],
+      "default": null
+    }
+    ]
+}'
+
+# Y ahora si de forma obligatoria usando el formato del avro
+{"order":{"string":"11223"}}
+
+
+
+############################################
+### CONSUMIR MENSAJES CON CONSUMER CLI   ###
+############################################
+
+# 01. Ingresar al terminal del consumer CLI
+docker exec -it kafka-broker-1 kafka-console-consumer --bootstrap-server kafka-broker-1:9092 --topic order-shipping-topic --from-beginning
+
+# 02. Consumiendo con un forma avro predefinido
+docker exec -it schema-registry kafka-avro-console-consumer \
+  --bootstrap-server kafka-broker-1:9092 \
+  --topic order-shipping-topic \
+  --group order-shipping-consumer-group
+  --from-beginning \
+  --property schema.registry.url=http://schema-registry:8081
+
+
+
+
+############################################
+### INICIAR AMBIENTE DE DBMARIA   ###
+############################################
+
+# 01. Crear bd
+ docker-compose up -d
+

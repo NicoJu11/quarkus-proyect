@@ -1,0 +1,54 @@
+2025-07-05 20:36:53 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.kafka.devservice.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-05 20:36:53 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-05 20:36:53 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.test-port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-05 20:36:54 INFO  [io.sm.re.me.kafka] (Quarkus Main Thread) SRMSG18229: Configured topics for channel 'order-shipping': [order-shipping-topic]
+2025-07-05 20:36:54 INFO  [io.co.ka.se.KafkaAvroDeserializerConfig] (Quarkus Main Thread) KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = false
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host = 
+	proxy.port = -1
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.reader = true
+	use.latest.version = true
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-05 20:36:54 INFO  [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18257: Kafka consumer kafka-consumer-order-shipping, connected to Kafka brokers 'PLAINTEXT://localhost:19092', belongs to the 'order-shipping-group-01' consumer group and is configured to poll records from [order-shipping-topic]
+2025-07-05 20:36:54 INFO  [io.quarkus] (Quarkus Main Thread) api-order-shipping-v1-consumer 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.20.1) started in 3.571s. 
+2025-07-05 20:36:54 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-07-05 20:36:54 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, config-yaml, confluent-registry-avro, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, kafka-client, messaging, messaging-kafka, reactive-mysql-client, rest-client, rest-client-jackson, smallrye-context-propagation, vertx]
+2025-07-05 20:37:13 INFO  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18256: Initialize record store for topic-partition 'order-shipping-topic-0' at position 7.
+2025-07-05 20:37:13 ERROR [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Error get event S789: Unsupported authentication method: auth_gssapi_client
+2025-07-05 20:37:13 WARN  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18204: A message sent to channel `order-shipping` has been nacked, ignored failure is: Unsupported authentication method: auth_gssapi_client.

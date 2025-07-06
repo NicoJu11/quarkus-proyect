@@ -1,8 +1,8 @@
-2025-07-06 01:34:44 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.kafka.devservice.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2025-07-06 01:34:44 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2025-07-06 01:34:44 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.test-port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2025-07-06 01:34:45 INFO  [io.sm.re.me.kafka] (Quarkus Main Thread) SRMSG18229: Configured topics for channel 'order-shipping': [order-shipping-topic]
-2025-07-06 01:34:45 INFO  [io.co.ka.se.KafkaAvroDeserializerConfig] (Quarkus Main Thread) KafkaAvroDeserializerConfig values: 
+2025-07-06 07:25:53 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.kafka.devservice.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-06 07:25:53 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-06 07:25:53 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.test-port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-06 07:25:54 INFO  [io.sm.re.me.kafka] (Quarkus Main Thread) SRMSG18229: Configured topics for channel 'order-shipping': [order-shipping-topic]
+2025-07-06 07:25:54 INFO  [io.co.ka.se.KafkaAvroDeserializerConfig] (Quarkus Main Thread) KafkaAvroDeserializerConfig values: 
 	auto.register.schemas = false
 	avro.reflection.allow.null = false
 	avro.use.logical.type.converters = false
@@ -45,11 +45,28 @@
 	use.schema.id = -1
 	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
 
-2025-07-06 01:34:45 INFO  [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18257: Kafka consumer kafka-consumer-order-shipping, connected to Kafka brokers 'PLAINTEXT://localhost:19092', belongs to the 'order-shipping-group-01' consumer group and is configured to poll records from [order-shipping-topic]
-2025-07-06 01:34:45 INFO  [io.quarkus] (Quarkus Main Thread) api-order-shipping-v1-consumer 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.20.1) started in 3.619s. 
-2025-07-06 01:34:45 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2025-07-06 01:34:45 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, config-yaml, confluent-registry-avro, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, kafka-client, messaging, messaging-kafka, reactive-mysql-client, rest-client, rest-client-jackson, smallrye-context-propagation, vertx]
-2025-07-06 01:37:15 INFO  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18256: Initialize record store for topic-partition 'order-shipping-topic-0' at position -1.
-2025-07-06 01:37:15 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping inserted: S7489
-2025-07-06 02:19:14 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (pool-1-thread-1) Files changed but restart not needed - notified extensions in: 0.049s 
-2025-07-06 02:19:14 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping already exists S7489
+2025-07-06 07:25:54 INFO  [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18257: Kafka consumer kafka-consumer-order-shipping, connected to Kafka brokers 'PLAINTEXT://localhost:19092', belongs to the 'order-shipping-group-01' consumer group and is configured to poll records from [order-shipping-topic]
+2025-07-06 07:25:54 INFO  [io.quarkus] (Quarkus Main Thread) api-order-shipping-v1-consumer 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.20.1) started in 4.765s. 
+2025-07-06 07:25:54 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-07-06 07:25:54 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, config-yaml, confluent-registry-avro, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, kafka-client, messaging, messaging-kafka, reactive-mysql-client, rest-client, rest-client-jackson, smallrye-context-propagation, vertx]
+2025-07-06 07:25:54 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:25:54 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:25:54 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:25:54 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:25:54 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:25:54 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:25:55 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:25:55 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:25:55 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:25:55 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:25:56 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:25:56 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:25:57 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:25:57 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:26:01 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:26:01 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:26:07 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Connection to node -1 (localhost/127.0.0.1:19092) could not be established. Node may not be available.
+2025-07-06 07:26:07 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:26:17 WARN  [or.ap.ka.cl.NetworkClient] (smallrye-kafka-consumer-thread-0) [Consumer clientId=kafka-consumer-order-shipping, groupId=order-shipping-group-01] Bootstrap broker localhost:19092 (id: -1 rack: null) disconnected
+2025-07-06 07:30:59 INFO  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18256: Initialize record store for topic-partition 'order-shipping-topic-0' at position 1.
+2025-07-06 07:31:00 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping inserted: S7489

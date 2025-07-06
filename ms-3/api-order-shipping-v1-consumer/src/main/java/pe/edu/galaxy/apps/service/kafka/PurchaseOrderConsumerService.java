@@ -13,6 +13,7 @@ import pe.edu.galaxy.apps.repository.PurchaseOrderRepository;
 import pe.edu.galaxy.apps.service.PurchaseOrderService;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.concurrent.CompletionStage;
 
 @ApplicationScoped
@@ -65,6 +66,9 @@ public class PurchaseOrderConsumerService implements PurchaseOrderService {
 				? new BigDecimal(orderShipping.getAmountShipper())
 				: null);
 		shipperEntity.setStatus(orderShipping.getStatusId());
+		shipperEntity.setDateShipper(LocalDateTime.now());
+		shipperEntity.setDateEstimatedDelivery(LocalDateTime.now().plusDays(4));
+
 		shipperEntity.setNoteShipper(orderShipping.getNoteShipper());
 		return shipperEntity;
 	}

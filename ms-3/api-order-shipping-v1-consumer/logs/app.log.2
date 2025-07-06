@@ -1,8 +1,8 @@
-2025-07-05 20:41:08 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.kafka.devservice.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2025-07-05 20:41:08 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2025-07-05 20:41:08 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.test-port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2025-07-05 20:41:09 INFO  [io.sm.re.me.kafka] (Quarkus Main Thread) SRMSG18229: Configured topics for channel 'order-shipping': [order-shipping-topic]
-2025-07-05 20:41:09 INFO  [io.co.ka.se.KafkaAvroDeserializerConfig] (Quarkus Main Thread) KafkaAvroDeserializerConfig values: 
+2025-07-06 01:34:44 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.kafka.devservice.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-06 01:34:44 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-06 01:34:44 WARN  [io.qu.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http.test-port" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-07-06 01:34:45 INFO  [io.sm.re.me.kafka] (Quarkus Main Thread) SRMSG18229: Configured topics for channel 'order-shipping': [order-shipping-topic]
+2025-07-06 01:34:45 INFO  [io.co.ka.se.KafkaAvroDeserializerConfig] (Quarkus Main Thread) KafkaAvroDeserializerConfig values: 
 	auto.register.schemas = false
 	avro.reflection.allow.null = false
 	avro.use.logical.type.converters = false
@@ -45,13 +45,11 @@
 	use.schema.id = -1
 	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
 
-2025-07-05 20:41:09 INFO  [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18257: Kafka consumer kafka-consumer-order-shipping, connected to Kafka brokers 'PLAINTEXT://localhost:19092', belongs to the 'order-shipping-group-01' consumer group and is configured to poll records from [order-shipping-topic]
-2025-07-05 20:41:09 INFO  [io.quarkus] (Quarkus Main Thread) api-order-shipping-v1-consumer 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.20.1) started in 3.624s. 
-2025-07-05 20:41:09 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2025-07-05 20:41:09 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, config-yaml, confluent-registry-avro, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, kafka-client, messaging, messaging-kafka, reactive-mysql-client, rest-client, rest-client-jackson, smallrye-context-propagation, vertx]
-2025-07-05 20:41:39 INFO  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18256: Initialize record store for topic-partition 'order-shipping-topic-0' at position 8.
-2025-07-05 20:41:39 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping inserted: S789
-2025-07-05 20:41:39 WARN  [or.hi.en.jd.sp.SqlExceptionHelper] (vert.x-eventloop-thread-0) SQL Error: 1452, SQLState: 23000
-2025-07-05 20:41:39 ERROR [or.hi.en.jd.sp.SqlExceptionHelper] (vert.x-eventloop-thread-0) {errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}
-2025-07-05 20:41:39 ERROR [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Error get event S789: error executing SQL statement [{errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}] [insert into shipper (amount_shipper,carrier,date_estimated_delivery,date_shipper,note_shipper,purchase_order_id,status_id,tracking_number,shipper_id) values (?,?,?,?,?,?,?,?,?)]
-2025-07-05 20:41:39 WARN  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18204: A message sent to channel `order-shipping` has been nacked, ignored failure is: error executing SQL statement [{errorMessage=Cannot add or update a child row: a foreign key constraint fails (`bd_order_shipping`.`shipper`, CONSTRAINT `shipper_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status_shipper` (`status_id`)), errorCode=1452, sqlState=23000}] [insert into shipper (amount_shipper,carrier,date_estimated_delivery,date_shipper,note_shipper,purchase_order_id,status_id,tracking_number,shipper_id) values (?,?,?,?,?,?,?,?,?)].
+2025-07-06 01:34:45 INFO  [io.sm.re.me.kafka] (smallrye-kafka-consumer-thread-0) SRMSG18257: Kafka consumer kafka-consumer-order-shipping, connected to Kafka brokers 'PLAINTEXT://localhost:19092', belongs to the 'order-shipping-group-01' consumer group and is configured to poll records from [order-shipping-topic]
+2025-07-06 01:34:45 INFO  [io.quarkus] (Quarkus Main Thread) api-order-shipping-v1-consumer 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.20.1) started in 3.619s. 
+2025-07-06 01:34:45 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-07-06 01:34:45 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, config-yaml, confluent-registry-avro, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, kafka-client, messaging, messaging-kafka, reactive-mysql-client, rest-client, rest-client-jackson, smallrye-context-propagation, vertx]
+2025-07-06 01:37:15 INFO  [io.sm.re.me.kafka] (vert.x-eventloop-thread-0) SRMSG18256: Initialize record store for topic-partition 'order-shipping-topic-0' at position -1.
+2025-07-06 01:37:15 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping inserted: S7489
+2025-07-06 02:19:14 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (pool-1-thread-1) Files changed but restart not needed - notified extensions in: 0.049s 
+2025-07-06 02:19:14 INFO  [pe.ed.ga.ap.se.ka.PurchaseOrderConsumerService] (vert.x-eventloop-thread-0) Shipping already exists S7489

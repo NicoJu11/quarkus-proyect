@@ -9,9 +9,67 @@ Caso 1: cuando solo se registra pedido para clientes que lo reciben desde tienda
 
 ![Logo del proyecto](tradicional.png "caso 1")
 
+
+curl :
+
+
+curl --request POST \
+  --url http://localhost:9091/v1/purchase-order \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.3' \
+  --data '{
+  "purchaseOrderId": "8989",
+  "clintId": "1",
+  "addressShipperId": "1",
+  "datePurchaseOrder": "2023-10-01T10:30:00",
+  "subtotal": 100.50,
+  "iva": 18.09,
+  "amountTotal": 118.59,
+  "statusOrder": "PENDIENTE",
+  "paymentMethod": "TARJETA",
+  "shipperId": "S7489",
+  "carrier": "DHL",
+  "trackingNumber": "TRK123456789",
+  "amountShipper": 15.00,
+  "statusId": "1",
+  "noteShipper": "Handle with care"
+}'
+
+
+
+
 Caso 2: cuando se registra pedido y su envio para clientes piden para delivery
 
 ![Logo del proyecto](evento.png "caso 2")
+
+
+curl :
+
+curl --request POST \
+  --url http://localhost:9098/v1/order-post \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.3' \
+  --data '{
+  "purchaseOrderId": "GFGG",
+  "clintId": "1",
+  "addressShipperId": "1",
+  "datePurchaseOrder": "2023-10-01T10:30:00",
+  "subtotal": 100.50,
+  "iva": 18.09,
+  "amountTotal": 118.59,
+  "statusOrder": "PENDIENTE",
+  "paymentMethod": "TARJETA",
+  "shipperId": "S7489",
+  "carrier": "DHL",
+  "trackingNumber": "TRK123456789",
+  "amountShipper": 15.00,
+  "statusId": "1",
+  "noteShipper": "Handle with care"
+}'
+
+
+
+
 
 
 

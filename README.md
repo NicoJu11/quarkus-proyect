@@ -1,6 +1,19 @@
 # api-order-shipping-v1
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Este proyecto trata de registar un pedido para despues regitrar la informacion de envio 
+
+Se presentan dos casos 
+
+
+Caso 1: cuando solo se registra pedido para clientes que lo reciben desde tienda
+
+![Logo del proyecto](tradicional.png "caso 1")
+
+Caso 2: cuando se registra pedido y su envio para clientes piden para delivery
+
+![Logo del proyecto](evento.png "caso 2")
+
+
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
 
@@ -64,4 +77,6 @@ If you want to learn more about building native executables, please consult <htt
 ## Errores
 - Response message:Non HTTP response message: Can't assign requested address
 
-# quarkus-proyect
+
+
+

@@ -1,4 +1,4 @@
-# api-zip-code-v1
+# api-order-shipping-v1
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
